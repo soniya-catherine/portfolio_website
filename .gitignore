@@ -8,8 +8,8 @@ dist/
 references/
 
 # Specific assets to exclude
-assets/my hand-drawn wireframe.jpg
-assets/new wireframe.jpg
+public/assets/my hand-drawn wireframe.JPG
+public/assets/new wireframe.jpg
 
 # macOS
 .DS_Store
