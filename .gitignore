@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Reference files
+references/
+
+# Specific assets to exclude
+assets/my hand-drawn wireframe.jpg
+assets/new wireframe.jpg
+
+# macOS
+.DS_Store

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SONIYA CATHERINE — Creative Designer Portfolio</title>
+  <meta name="description" content="Immersive graphic design portfolio of Soniya Catherine. Featuring Print, Digital, and Website design artwork.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Antonio Bold -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- SINGLE FULL-WIDTH DESKTOP FLOATING NAVIGATION BAR (NAME + CENTERED CONTACTS + SIMPLIFIED FILTER DROPDOWN) -->
+  <header class="desktop-nav-header" id="desktopNav">
+    <div class="glass-pill desktop-unified-nav">
+      <!-- Left: Brand Name (Clickable to return to ALL view) -->
+      <div class="nav-brand-group">
+        <span class="brand-name" id="desktopBrandHome" role="button" tabindex="0" title="Return to ALL">SONIYA CATHERINE</span>
+      </div>
+
+      <!-- Center: Visually Centered Contact Links -->
+      <nav class="nav-contact-group" aria-label="Contact Links">
+        <!-- Email Link -->
+        <a href="mailto:soniyacatherinedesign@gmail.com" class="icon-btn" aria-label="Email Soniya Catherine" title="Email: soniyacatherinedesign@gmail.com">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="3"></rect>
+            <path d="M22 6L12 13L2 6"></path>
+          </svg>
+        </a>
+
+        <!-- Phone Link -->
+        <a href="tel:+917994579105" class="icon-btn" aria-label="Call Soniya Catherine" title="Phone: +91 7994579105">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </a>
+
+        <!-- LinkedIn Link -->
+        <a href="https://www.linkedin.com/in/soniya-catherine" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Soniya Catherine LinkedIn Profile" title="LinkedIn">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+
+        <!-- Resume Link -->
+        <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="View Resume PDF" title="Resume">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <line x1="10" y1="9" x2="8" y2="9"></line>
+          </svg>
+        </a>
+      </nav>
+
+      <!-- Right: Simplified Desktop Filter Dropdown -->
+      <div class="desktop-filter-dropdown" id="desktopFilterDropdown">
+        <button class="filter-dropdown-trigger" id="filterDropdownTrigger" type="button" aria-expanded="false" aria-haspopup="true">
+          <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+          </svg>
+          <span class="selected-filter-label" id="selectedFilterLabel">ALL</span>
+          <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="filter-dropdown-menu" id="filterDropdownMenu" role="menu" aria-label="Filter category">
+          <button class="filter-dropdown-item active" data-category="ALL" role="menuitem" type="button">ALL</button>
+          <button class="filter-dropdown-item" data-category="PRINT" role="menuitem" type="button">PRINT</button>
+          <button class="filter-dropdown-item" data-category="DIGITAL" role="menuitem" type="button">DIGITAL</button>
+          <button class="filter-dropdown-item" data-category="WEBSITE" role="menuitem" type="button">WEBSITE</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE LOCALIZED GLASS BLUR LAYER (Softens artwork passing under fixed mobile nav) -->
+  <div class="mobile-nav-blur-layer" aria-hidden="true"></div>
+
+  <!-- MOBILE COMBINED FIXED NAV (Header + Hamburger) -->
+  <header class="mobile-nav-header" id="mobileNav">
+    <div class="glass-pill mobile-header-pill">
+      <span class="brand-name" id="mobileBrandHome" role="button" tabindex="0" title="Return to ALL">SONIYA CATHERINE</span>
+      <button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span class="hamburger-line line-top"></span>
+        <span class="hamburger-line line-bottom"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU OVERLAY (RESTORED PREVIOUS DESIGN & FORMATTING) -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay" aria-hidden="true">
+    <div class="mobile-menu-content">
+      <div class="menu-item-group">
+        <span class="menu-label">Email</span>
+        <a href="mailto:soniyacatherinedesign@gmail.com" class="menu-link email-link">soniyacatherinedesign@gmail.com</a>
+      </div>
+
+      <div class="menu-item-group">
+        <span class="menu-label">Phone</span>
+        <a href="tel:+917994579105" class="menu-link phone-link">+91 7994579105</a>
+      </div>
+
+      <div class="menu-item-group">
+        <a href="https://www.linkedin.com/in/soniya-catherine" target="_blank" rel="noopener noreferrer" class="menu-link external-link">
+          LinkedIn
+          <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
+
+      <div class="menu-item-group">
+        <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="menu-link external-link">
+          Resume
+          <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESKTOP ARROW CONTROLS -->
+  <button class="nav-arrow left-arrow" id="scrollLeftBtn" type="button" aria-label="Scroll left in gallery">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </button>
+  <button class="nav-arrow right-arrow" id="scrollRightBtn" type="button" aria-label="Scroll right in gallery">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </button>
+
+  <!-- LOWER VIEWPORT SOFT DARK ATMOSPHERIC GRADIENT (INSPIRED BY REFERENCE 3) -->
+  <div class="lower-viewport-gradient" aria-hidden="true"></div>
+
+  <!-- FIXED LOWER "CREATIVE DESIGNER" TYPOGRAPHY (ONE-LINE ON DESKTOP, INTRO-ONLY STACKED ON MOBILE) -->
+  <div class="fixed-creative-designer" id="fixedCreativeDesigner" aria-hidden="true">
+    <!-- Desktop: ONE HORIZONTAL LINE -->
+    <h1 class="creative-designer-desktop">CREATIVE DESIGNER</h1>
+    <!-- Mobile: STACKED & PROMINENT INTRO TYPOGRAPHY -->
+    <div class="creative-designer-mobile">
+      <span class="creative-text">CREATIVE</span>
+      <span class="designer-text">DESIGNER</span>
+    </div>
+  </div>
+
+  <!-- MAIN GALLERY CONTAINER (LEFT-ALIGNED WITH NAV, STRICTLY BELOW NAV) -->
+  <main class="gallery-viewport" id="galleryViewport">
+    <div class="gallery-track" id="galleryTrack">
+      <!-- Dynamic Portfolio Masonry Columns rendered by main.js -->
+    </div>
+  </main>
+
+  <!-- MOBILE VERTICAL CONTROLS STACK (FILTER ICON DIRECTLY ABOVE SCROLL-TO-TOP) -->
+  <aside class="mobile-controls-stack" id="mobileControlsStack" aria-label="Mobile Navigation Controls">
+    <!-- Mobile Filter Icon Button & Compact Glass Popup -->
+    <div class="mobile-filter-wrapper" id="mobileFilterWrapper">
+      <button class="mobile-filter-btn" id="mobileFilterBtn" type="button" aria-label="Filter categories" aria-expanded="false" aria-haspopup="true">
+        <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+      </button>
+      <div class="mobile-filter-menu" id="mobileFilterMenu" role="menu" aria-label="Filter categories">
+        <button class="mobile-filter-item active" data-category="ALL" role="menuitem" type="button">ALL</button>
+        <button class="mobile-filter-item" data-category="PRINT" role="menuitem" type="button">PRINT</button>
+        <button class="mobile-filter-item" data-category="DIGITAL" role="menuitem" type="button">DIGITAL</button>
+        <button class="mobile-filter-item" data-category="WEBSITE" role="menuitem" type="button">WEBSITE</button>
+      </div>
+    </div>
+
+    <!-- Mobile Scroll to Top Arrow -->
+    <button class="mobile-back-to-top" id="mobileBackToTop" type="button" aria-label="Scroll to top of portfolio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- IMAGE LIGHTBOX MODAL (WITH DISTINCT BRAND / CLIENT & DESIGN SEPARATION) -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Artwork Detail View">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <!-- Floating Lightbox Close Button: Higher and to the right -->
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image lightbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <!-- Lightbox Previous Arrow -->
+    <button class="lightbox-nav-arrow lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous design" disabled>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <!-- Lightbox Next Arrow -->
+    <button class="lightbox-nav-arrow lightbox-next" id="lightboxNext" type="button" aria-label="Next design">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <div class="lightbox-content">
+      <div class="lightbox-image-wrapper">
+        <img id="lightboxImg" src="" alt="" />
+      </div>
+      <div class="lightbox-caption">
+        <span class="lightbox-category" id="lightboxCategory"></span>
+        <span class="lightbox-brand" id="lightboxBrand"></span>
+        <h2 class="lightbox-title" id="lightboxTitle"></h2>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
