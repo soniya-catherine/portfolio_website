@@ -338,11 +338,11 @@ html, body {
   font-weight: 700;
   font-size: clamp(3.5rem, 7.5vw, 7.2rem);
   letter-spacing: 0.04em;
-  color: #f5f5f7;
+  color: #eff0f3;
   text-transform: uppercase;
   white-space: nowrap;
   line-height: 1;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.22), 0 1px 4px rgba(0,0,0,0.10);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.08);
   margin: 0;
   padding: 0;
 }
@@ -401,6 +401,9 @@ html, body {
   width: 100%;
   height: auto; /* Card naturally conforms to image proportions */
   z-index: 5;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
 
 /* Varied Column Widths for Visual Rhythm */
@@ -416,6 +419,10 @@ html, body {
   object-fit: contain;
   border-radius: 10px;
   transition: transform var(--transition-medium);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
 }
 
 .art-card:hover {
@@ -451,9 +458,9 @@ html, body {
 .lightbox-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(230, 232, 236, 0.88);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  background: rgba(232, 233, 236, 0.96);
+  backdrop-filter: blur(36px) saturate(110%);
+  -webkit-backdrop-filter: blur(36px) saturate(110%);
 }
 
 .lightbox-content {
@@ -566,18 +573,18 @@ html, body {
 }
 
 .lightbox-prev {
-  left: 20px;
+  left: 32px;
 }
 
 .lightbox-next {
-  right: 20px;
+  right: 32px;
 }
-
-
 
 .lightbox-image-wrapper {
   max-width: 82vw;
   max-height: 72vh;
+  width: auto;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -585,16 +592,24 @@ html, body {
   overflow: hidden;
   box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.2);
   background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
 
 .lightbox-image-wrapper img {
-  max-width: 100%;
+  max-width: 82vw;
   max-height: 72vh;
+  width: auto;
+  height: auto;
   object-fit: contain;
   display: block;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
 
-/* Lightbox Caption with Clear Visual Hierarchy for Brand vs Design */
+/* Lightbox Caption with Integrated Capitalized Brand & Project Title */
 .lightbox-caption {
   margin-top: 14px;
   text-align: center;
@@ -602,7 +617,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
 }
 
 .lightbox-category {
@@ -614,21 +629,12 @@ html, body {
   color: var(--text-light);
 }
 
-.lightbox-brand {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-top: 1px;
-}
-
 .lightbox-title {
   font-size: 1.12rem;
   font-weight: 600;
   color: var(--text-main);
-  margin-top: 1px;
+  letter-spacing: 0.02em;
+  margin-top: 2px;
 }
 
 
@@ -649,36 +655,44 @@ html, body {
     display: none !important;
   }
 
-  /* Mobile Localized Glass Blur Layer (Softens artwork passing under fixed mobile nav) */
+  /* Mobile Nav Blur Layer: Subtle frosted/blurred atmospheric backdrop ABOVE and on SIDES of nav, fading seamlessly at nav bottom */
   .mobile-nav-blur-layer {
-    display: block;
+    display: block !important;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 72px;
-    backdrop-filter: blur(16px) saturate(160%);
-    -webkit-backdrop-filter: blur(16px) saturate(160%);
-    background: linear-gradient(to bottom, rgba(232, 233, 236, 0.72) 0%, rgba(232, 233, 236, 0.35) 65%, rgba(232, 233, 236, 0) 100%);
+    height: 66px;
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    background: linear-gradient(to bottom, rgba(232, 233, 236, 0.52) 0%, rgba(232, 233, 236, 0.35) 55%, rgba(232, 233, 236, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 65%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 65%, transparent 100%);
     pointer-events: none;
     z-index: 450;
   }
   
-  /* Mobile Combined Top Navigation Bar */
+  /* Mobile Combined Top Navigation Bar (z-index: 700 ensures hamburger/X stays above menu overlay at z-index: 600) */
   .mobile-nav-header {
     display: block;
     position: fixed;
     top: 16px;
     left: 16px;
     right: 16px;
-    z-index: 500;
+    z-index: 700;
   }
 
+  /* Mobile Floating Glass Pill: 10% less opaque (0.88 -> 0.79) with glass on top and sides */
   .mobile-header-pill {
     width: 100%;
     justify-content: space-between;
     padding: 10px 18px;
     border-radius: 16px;
+    background: rgba(246, 247, 249, 0.79);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.68);
+    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.08);
   }
 
   .mobile-header-pill .brand-name {
@@ -701,6 +715,8 @@ html, body {
     gap: 6px;
     cursor: pointer;
     padding: 0;
+    position: relative;
+    z-index: 710;
   }
 
   .hamburger-line {
@@ -726,9 +742,9 @@ html, body {
     position: fixed;
     inset: 0;
     z-index: 600;
-    background: rgba(232, 233, 236, 0.88);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    background: rgba(232, 233, 236, 0.92);
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-medium);
@@ -787,9 +803,10 @@ html, body {
     height: 20px;
   }
 
-  /* Mobile Lower Dark Gradient */
+  /* Mobile Lower Dark Gradient — Slightly darker for refined typography contrast */
   .lower-viewport-gradient {
-    height: 220px;
+    height: 190px;
+    background: linear-gradient(to top, rgba(14, 15, 18, 0.68) 0%, rgba(14, 15, 18, 0.40) 45%, rgba(14, 15, 18, 0.12) 75%, rgba(14, 15, 18, 0) 100%);
   }
 
   /* Mobile Intro-Only "CREATIVE / DESIGNER" Typography */
@@ -800,11 +817,12 @@ html, body {
     transform: none;
     width: auto;
     z-index: 200;
-    transition: opacity 0.35s ease, visibility 0.35s ease;
+    transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.45s;
   }
 
   .fixed-creative-designer.hidden {
     opacity: 0 !important;
+    transform: translateY(10px) !important;
     visibility: hidden !important;
     pointer-events: none !important;
   }
@@ -814,24 +832,24 @@ html, body {
     flex-direction: column;
     align-items: center;
     line-height: 0.82;
-    text-shadow: 0 4px 28px rgba(0, 0, 0, 0.75);
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.25);
   }
 
   .creative-text {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(3.8rem, 15vw, 6.2rem);
-    color: #f5f5f7;
-    letter-spacing: 0.02em;
+    font-size: clamp(4.8rem, 20vw, 7.8rem);
+    color: #eff0f3;
+    letter-spacing: 0.03em;
     display: block;
   }
 
   .designer-text {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(2.6rem, 10.5vw, 4.2rem);
-    color: #f5f5f7;
-    letter-spacing: 0.05em;
+    font-size: clamp(3.2rem, 13.5vw, 5.2rem);
+    color: #eff0f3;
+    letter-spacing: 0.06em;
     display: block;
   }
 
@@ -994,5 +1012,25 @@ html, body {
 
   .lightbox-next {
     right: 10px;
+  }
+
+  .lightbox-content {
+    max-width: 92vw;
+    max-height: 80vh;
+  }
+
+  .lightbox-image-wrapper {
+    max-width: 88vw;
+    max-height: 64vh;
+    width: auto;
+    height: auto;
+  }
+
+  .lightbox-image-wrapper img {
+    max-width: 88vw;
+    max-height: 64vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
   }
 }

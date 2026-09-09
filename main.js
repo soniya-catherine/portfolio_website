@@ -433,6 +433,15 @@ const portfolioData = [
     src: 'assets/print designs/gather_tag02-02.webp',
     alt: 'Gather packaging product tag 02',
     colWidth: 'col-narrow'
+  },
+  {
+    id: 'prt-gat-qr',
+    brand: 'Gather',
+    title: 'Brand QR Stand Display',
+    category: 'PRINT',
+    src: 'assets/print designs/gather, qr stand.webp',
+    alt: 'Gather brand QR stand counter display',
+    colWidth: 'col-narrow'
   }
 ];
 
@@ -462,7 +471,6 @@ const lightboxModal = document.getElementById('lightboxModal');
 const lightboxBackdrop = document.getElementById('lightboxBackdrop');
 const lightboxClose = document.getElementById('lightboxClose');
 const lightboxImg = document.getElementById('lightboxImg');
-const lightboxBrand = document.getElementById('lightboxBrand');
 const lightboxTitle = document.getElementById('lightboxTitle');
 const lightboxCategory = document.getElementById('lightboxCategory');
 
@@ -476,6 +484,36 @@ let currentCategory = 'ALL';
 // Lightbox Navigation State
 let lightboxFilteredList = []; // Holds the filtered dataset at the moment a lightbox was opened
 let lightboxIndex = -1;        // Index of the currently shown item within lightboxFilteredList
+
+// Helper to create an artwork card element with image download protection
+function createArtCard(item, isVisualRepeat = false) {
+  const card = document.createElement('div');
+  card.className = `art-card${isVisualRepeat ? ' visual-repeat' : ''}`;
+  card.setAttribute('data-id', item.id);
+  card.setAttribute('data-category', item.category);
+  card.setAttribute('role', 'button');
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('aria-label', `View ${item.brand} — ${item.title}`);
+
+  const img = document.createElement('img');
+  img.src = item.src;
+  img.alt = item.alt;
+  img.loading = 'lazy';
+  img.setAttribute('draggable', 'false');
+
+  card.appendChild(img);
+
+  // Lightbox click handler
+  card.addEventListener('click', () => openLightbox(item));
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openLightbox(item);
+    }
+  });
+
+  return card;
+}
 
 // 3. RENDER MASONRY GALLERY (ALL FIRST-ROW ITEMS START AT SAME TOP Y-BASELINE)
 function renderGallery(activeCat = 'ALL') {
@@ -508,32 +546,26 @@ function renderGallery(activeCat = 'ALL') {
     colEl.className = `masonry-col ${colWidthClass}`;
 
     colItems.forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'art-card';
-      card.setAttribute('data-id', item.id);
-      card.setAttribute('data-category', item.category);
-      card.setAttribute('role', 'button');
-      card.setAttribute('tabindex', '0');
-      card.setAttribute('aria-label', `View ${item.brand} — ${item.title}`);
-
-      const img = document.createElement('img');
-      img.src = item.src;
-      img.alt = item.alt;
-      img.loading = 'lazy';
-
-      card.appendChild(img);
-
-      // Lightbox click handler
-      card.addEventListener('click', () => openLightbox(item));
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openLightbox(item);
-        }
-      });
-
-      colEl.appendChild(card);
+      colEl.appendChild(createArtCard(item));
     });
+
+    // On Desktop in ALL view: Add a few carefully chosen visual repeats into lower empty column areas
+    // (Selected strictly from far-away columns, purely presentational, never added to filter datasets)
+    if (!isMobile && activeCat === 'ALL') {
+      if (c === 4) {
+        // Col 5 has compact logo: repeat Blue Haven tote from Col 2
+        const repeatItem = portfolioData.find(i => i.id === 'prt-blue-haven');
+        if (repeatItem) colEl.appendChild(createArtCard(repeatItem, true));
+      } else if (c === 17) {
+        // Col 18 has compact logo & form: repeat Digital Agency website from Col 7
+        const repeatItem = portfolioData.find(i => i.id === 'web-mock-3');
+        if (repeatItem) colEl.appendChild(createArtCard(repeatItem, true));
+      } else if (c === 19) {
+        // Col 20 has compact price tag & tracker: repeat Women Resilience newsletter from Col 6
+        const repeatItem = portfolioData.find(i => i.id === 'dig-women-res');
+        if (repeatItem) colEl.appendChild(createArtCard(repeatItem, true));
+      }
+    }
 
     galleryTrack.appendChild(colEl);
   }
@@ -786,8 +818,8 @@ function populateLightbox(item) {
   lightboxImg.src   = item.src;
   lightboxImg.alt   = item.alt;
   lightboxCategory.textContent = item.category;
-  lightboxBrand.textContent    = item.brand;
-  lightboxTitle.textContent    = item.title;
+  const brandUpper = (item.brand || '').toUpperCase();
+  lightboxTitle.textContent    = brandUpper ? `${brandUpper}: ${item.title}` : item.title;
 }
 
 // Enable / disable prev & next arrows based on current index and list length
@@ -879,7 +911,20 @@ mobileBackToTop?.addEventListener('click', () => {
   }
 });
 
-// 11. INITIALIZE ON DOM READY
+// 11. IMAGE DOWNLOAD PROTECTION DETERRENTS (Anti-drag, prevent context menu on artwork)
+document.addEventListener('contextmenu', (e) => {
+  if (e.target.closest('.art-card') || e.target.closest('.lightbox-image-wrapper') || e.target.closest('.gallery-track') || e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});
+
+document.addEventListener('dragstart', (e) => {
+  if (e.target.closest('.art-card') || e.target.closest('.lightbox-image-wrapper') || e.target.closest('.gallery-track') || e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});
+
+// 12. INITIALIZE ON DOM READY
 document.addEventListener('DOMContentLoaded', () => {
   renderGallery('ALL');
   resetAutoScrollTimer();
