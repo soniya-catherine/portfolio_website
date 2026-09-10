@@ -8,19 +8,19 @@ const portfolioData = [
   {
     id: 'dig-gather-1',
     brand: 'Gather',
-    title: 'Social Media Promotional Poster I',
+    title: 'Brand Story Social Media Design',
     category: 'DIGITAL',
     src: 'assets/digital designs/gather_instagram_poster01.webp',
-    alt: 'Gather social media poster 01',
+    alt: 'Brand Story Social Media Design',
     colWidth: 'col-medium'
   },
   {
     id: 'prt-adv-book3',
     brand: 'Advocation',
-    title: 'Editorial Typography Spread',
+    title: 'Employment Lawyer Guide',
     category: 'PRINT',
     src: 'assets/print designs/advocation-book03.webp',
-    alt: 'Advocation typography editorial spread',
+    alt: 'Employment Lawyer Guide',
     colWidth: 'col-wide'
   },
 
@@ -28,30 +28,30 @@ const portfolioData = [
   {
     id: 'prt-blue-haven',
     brand: 'Blue Haven',
-    title: 'Screenprinted Canvas Tote Bag',
+    title: 'Branded Tote Bag',
     category: 'PRINT',
     src: 'assets/print designs/blue haven tote bag.webp',
-    alt: 'Blue Haven screenprinted tote bag',
+    alt: 'Branded Tote Bag',
     colWidth: 'col-narrow'
   },
   {
     id: 'web-mock-1',
-    brand: 'Studio Interactive',
-    title: 'Creative Studio Web Experience',
+    brand: 'SA Collective Inc.',
+    title: 'Website Homepage',
     category: 'WEBSITE',
     src: 'assets/website designs/website-mockup01.webp',
-    alt: 'Studio web UI design mockup 01',
+    alt: 'Website Homepage',
     colWidth: 'col-wide'
   },
 
   // --- COLUMN 3 ---
   {
     id: 'web-mock-5',
-    brand: 'Editorial Media',
-    title: 'Digital Magazine & Publication Web Layout',
+    brand: 'Needy Aid Relief',
+    title: 'Website Content & Testimonial Page',
     category: 'WEBSITE',
     src: 'assets/website designs/website-mockup05.webp',
-    alt: 'Editorial media publication web mockup 05',
+    alt: 'Website Content & Testimonial Page',
     colWidth: 'col-wide'
   },
   {
@@ -60,7 +60,7 @@ const portfolioData = [
     title: '90-Day Challenge Digital Poster',
     category: 'DIGITAL',
     src: 'assets/digital designs/juztshine 90 day challenge poster.webp',
-    alt: 'Juztshine 90 day challenge poster',
+    alt: 'Juztshine 90-Day Challenge Digital Poster',
     colWidth: 'col-narrow'
   },
 
@@ -68,47 +68,47 @@ const portfolioData = [
   {
     id: 'prt-adv-post2',
     brand: 'Advocation',
-    title: 'Promotional Postcard Series II',
+    title: 'Severance Information Postcard II',
     category: 'PRINT',
     src: 'assets/print designs/advocation postcard 02.webp',
-    alt: 'Advocation promotional postcard 02',
+    alt: 'Advocation Severance Information Postcard II',
     colWidth: 'col-medium'
   },
   {
     id: 'web-mock-2',
-    brand: 'SaaS Platform',
-    title: 'Enterprise Cloud Platform Dashboard',
+    brand: 'Royal African Pride',
+    title: 'Best Sellers & Categories Page',
     category: 'WEBSITE',
     src: 'assets/website designs/website-mockup02.webp',
-    alt: 'Enterprise cloud platform web mockup 02',
+    alt: 'Best Sellers & Categories Page',
     colWidth: 'col-medium'
   },
 
   // --- COLUMN 5 ---
   {
     id: 'dig-self-serve',
-    brand: 'Self-Serve Severence',
-    title: 'Brand Identity & Minimalist Logo',
+    brand: 'Self-Serve Severance',
+    title: 'Brand Identity & Logo',
     category: 'DIGITAL',
     src: 'assets/digital designs/self-serve-sverence-logo.webp',
-    alt: 'Self-serve Severence logo branding mark',
+    alt: 'Self Serve Severance, Brand Identity & Logo',
     colWidth: 'col-narrow'
   },
   {
     id: 'prt-dest-post2',
     brand: 'Destiny',
-    title: 'Typographic Poster Series II',
+    title: 'Healthy Food Guide Poster',
     category: 'PRINT',
     src: 'assets/print designs/destiny poster 2.webp',
-    alt: 'Destiny typographic poster print 02',
+    alt: 'Destiny Healthy Food Guide Poster',
     colWidth: 'col-medium'
   },
 
   // --- COLUMN 6 ---
   {
     id: 'dig-women-res',
-    brand: 'Women Resilience',
-    title: 'Digital Newsletter Editorial Layout',
+    brand: 'Women\'s Resilience',
+    title: 'Editorial Newsletter Design',
     category: 'DIGITAL',
     src: 'assets/digital designs/Newsletter design for Women Resilience.webp',
     alt: 'Women Resilience digital newsletter design',
@@ -117,7 +117,7 @@ const portfolioData = [
   {
     id: 'web-dest-mock1',
     brand: 'Destiny',
-    title: 'Brand Web Experience UI Concept I',
+    title: 'Web Experience UI Concept I',
     category: 'WEBSITE',
     src: 'assets/website designs/destiny mockup 1.webp',
     alt: 'Destiny brand web interface mockup 01',
@@ -128,7 +128,7 @@ const portfolioData = [
   {
     id: 'prt-needy-banner',
     brand: 'Needy Aid',
-    title: 'Brand Pull-Up Exhibition Banner',
+    title: 'Brand Pull-Up Banner',
     category: 'PRINT',
     src: 'assets/print designs/Needy aid-brand pull up banner.webp',
     alt: 'Needy Aid brand pull up banner print',
@@ -136,11 +136,11 @@ const portfolioData = [
   },
   {
     id: 'web-mock-3',
-    brand: 'Digital Agency',
-    title: 'Creative Portfolio Web Architecture',
+    brand: 'Royal African Pride',
+    title: 'Content Homepage',
     category: 'WEBSITE',
     src: 'assets/website designs/website-mockup03.webp',
-    alt: 'Digital agency portfolio web mockup 03',
+    alt: 'Royal African Pride, Content Homepage',
     colWidth: 'col-wide'
   },
 
@@ -148,39 +148,39 @@ const portfolioData = [
   {
     id: 'dig-dest-fund',
     brand: 'Destiny',
-    title: 'Fundraiser Campaign Event Flyer',
+    title: 'Giving Hands Fundraiser Campaign',
     category: 'DIGITAL',
     src: 'assets/digital designs/destiny fundraiser flyer@2x.webp',
-    alt: 'Destiny fundraiser event flyer design',
+    alt: 'Destiny, Giving Hands Fundraiser Campaign',
     colWidth: 'col-narrow'
   },
   {
     id: 'prt-adv-book1',
     brand: 'Advocation',
-    title: 'Publication Book Cover Design',
+    title: 'Severance Guide - Table of Contents',
     category: 'PRINT',
     src: 'assets/print designs/advocation-book01.webp',
-    alt: 'Advocation publication book cover',
+    alt: 'Advocation, Severance Guide - Table of Contents',
     colWidth: 'col-medium'
   },
 
   // --- COLUMN 9 ---
   {
     id: 'web-nar-mock3',
-    brand: 'NAR Architecture',
-    title: 'Architectural Portfolio Web UI',
+    brand: 'Needy Aid Relief',
+    title: 'Web UI I',
     category: 'WEBSITE',
     src: 'assets/website designs/mockup 3 - nar.webp',
-    alt: 'NAR architectural portfolio web mockup',
+    alt: 'Needy Aid Relief, Web UI I',
     colWidth: 'col-wide'
   },
   {
     id: 'dig-gather-2',
     brand: 'Gather',
-    title: 'Social Media Promotional Poster II',
+    title: 'Berry Bloom Cake Campaign',
     category: 'DIGITAL',
     src: 'assets/digital designs/gather_instagram_poster02.webp',
-    alt: 'Gather social media poster 02',
+    alt: 'Gather, Berry Bloom Cake Campaign',
     colWidth: 'col-medium'
   },
 
@@ -188,59 +188,59 @@ const portfolioData = [
   {
     id: 'prt-dest-post1',
     brand: 'Destiny',
-    title: 'Typographic Poster Series I',
+    title: 'Make A Difference Poster',
     category: 'PRINT',
     src: 'assets/print designs/destiny poster01.webp',
-    alt: 'Destiny typographic poster print 01',
+    alt: 'Destiny, Make A Difference Poster',
     colWidth: 'col-narrow'
   },
   {
     id: 'web-mock-4',
-    brand: 'Retail Storefront',
-    title: 'Modern E-Commerce Storefront UI',
+    brand: 'Needy Aid Relief',
+    title: 'Website Hero Section',
     category: 'WEBSITE',
     src: 'assets/website designs/website-mockup04.webp',
-    alt: 'E-commerce web store interface mockup 04',
+    alt: 'Needy Aid Relief, Website Hero Section',
     colWidth: 'col-wide'
   },
 
   // --- COLUMN 11 ---
   {
     id: 'dig-com-food',
-    brand: 'Community Food Initiative',
-    title: 'Food Drive Promotional Flyer',
+    brand: 'Destiny',
+    title: 'Community Food Initiative Campaign',
     category: 'DIGITAL',
     src: 'assets/digital designs/flyer-community food.webp',
-    alt: 'Community food initiative promotional flyer',
+    alt: 'Destiny, Community Food Initiative Campaign',
     colWidth: 'col-narrow'
   },
   {
     id: 'prt-adv-post1',
     brand: 'Advocation',
-    title: 'Promotional Postcard Series I',
+    title: 'Severance Information Postcard I',
     category: 'PRINT',
     src: 'assets/print designs/advocation postcard 01.webp',
-    alt: 'Advocation promotional postcard 01',
+    alt: 'Advocation, Severance Information Postcard I',
     colWidth: 'col-medium'
   },
 
   // --- COLUMN 12 ---
   {
     id: 'web-wr-mock1',
-    brand: 'Women Resilience',
-    title: 'Community Advocacy Web Platform',
+    brand: 'Women\'s Resilience',
+    title: 'Website Homepage',
     category: 'WEBSITE',
     src: 'assets/website designs/mockup-1-wr.webp',
-    alt: 'Women Resilience web platform mockup',
+    alt: 'Women\'s Resilience, Website Homepage',
     colWidth: 'col-wide'
   },
   {
     id: 'dig-dizaneals',
     brand: 'Dizaneals',
-    title: 'Brand Identity & Logo Mark',
+    title: 'Brand Identity & Logo',
     category: 'DIGITAL',
     src: 'assets/digital designs/dizaneals logo.webp',
-    alt: 'Dizaneals logo design mark',
+    alt: 'Dizaneals, Brand Identity & Logok',
     colWidth: 'col-narrow'
   },
 
@@ -248,19 +248,19 @@ const portfolioData = [
   {
     id: 'prt-dest-post3',
     brand: 'Destiny',
-    title: 'Typographic Poster Series III',
+    title: 'Giving Hands Fundraiser Poster',
     category: 'PRINT',
     src: 'assets/print designs/destiny poster 3.webp',
-    alt: 'Destiny typographic poster print 03',
+    alt: 'Destiny, Giving Hands Fundraiser Poster',
     colWidth: 'col-medium'
   },
   {
     id: 'dig-sa-collect',
     brand: 'SA Collective Inc.',
-    title: 'Corporate Newsletter Editorial',
+    title: 'Corporate Newsletter Design',
     category: 'DIGITAL',
     src: 'assets/digital designs/newsletter SA Collective Inc.webp',
-    alt: 'SA Collective Inc newsletter design',
+    alt: 'SA Collective Inc, newsletter design',
     colWidth: 'col-medium'
   },
 
@@ -268,50 +268,50 @@ const portfolioData = [
   {
     id: 'web-dest-mock2',
     brand: 'Destiny',
-    title: 'Brand Web Experience UI Concept II',
+    title: 'Web Experience UI Concept II',
     category: 'WEBSITE',
     src: 'assets/website designs/mockup 2 - destiny.webp',
-    alt: 'Destiny brand web interface mockup 02',
+    alt: 'Destiny, Web Experience UI Concept II',
     colWidth: 'col-wide'
   },
   {
     id: 'prt-gat-tag1-1',
     brand: 'Gather',
-    title: 'Apparel Hangtag Edition I',
+    title: 'Brand Tag - Front',
     category: 'PRINT',
     src: 'assets/print designs/gather_tag01-01.webp',
-    alt: 'Gather apparel hangtag 01',
+    alt: 'Gather, Brand Tag - Front',
     colWidth: 'col-narrow'
   },
 
   // --- COLUMN 15 ---
   {
     id: 'dig-ig01',
-    brand: 'Social Studio',
-    title: 'Editorial Feed Graphics I',
+    brand: 'Destiny',
+    title: 'Inspirational Quote Social Media Design',
     category: 'DIGITAL',
     src: 'assets/digital designs/ig01.webp',
-    alt: 'Editorial social media graphics 01',
+    alt: 'Destiny, Inspirational Quote Social Media Design',
     colWidth: 'col-narrow'
   },
   {
     id: 'prt-adv-book2',
     brand: 'Advocation',
-    title: 'Book Editorial Inner Page Layout',
+    title: 'Understanding Job Loss Guide',
     category: 'PRINT',
     src: 'assets/print designs/advocation-book02.webp',
-    alt: 'Advocation book inner spread layout',
+    alt: 'Advocation, Understanding Job Loss Guide',
     colWidth: 'col-medium'
   },
 
   // --- COLUMN 16 ---
   {
     id: 'web-mock-6',
-    brand: 'Brand Studio',
-    title: 'Interactive Brand Agency Website',
+    brand: 'SA Collective Inc.',
+    title: 'Who We Are Website Section',
     category: 'WEBSITE',
     src: 'assets/website designs/website-mockup06.webp',
-    alt: 'Interactive agency website mockup 06',
+    alt: 'SA Collective Inc., Who We Are Website Section',
     colWidth: 'col-wide'
   },
   {
@@ -320,27 +320,27 @@ const portfolioData = [
     title: 'Vinyl Decal Graphic Sticker',
     category: 'PRINT',
     src: 'assets/print designs/destiny decal.webp',
-    alt: 'Destiny vinyl decal graphic sticker',
+    alt: 'Destiny, vinyl decal graphic sticker',
     colWidth: 'col-narrow'
   },
 
   // --- COLUMN 17 ---
   {
     id: 'dig-ig-story',
-    brand: 'Instagram Story Campaign',
-    title: 'Story Editorial Promotion Layout',
+    brand: 'Realtorshop.ca',
+    title: 'Promotional Instagram Story',
     category: 'DIGITAL',
     src: 'assets/digital designs/instagram story.gif',
-    alt: 'Instagram story promotional layout',
+    alt: 'Realtorshop.ca, Promotional Instagram Story',
     colWidth: 'col-narrow'
   },
   {
     id: 'prt-gat-tag1-2',
     brand: 'Gather',
-    title: 'Apparel Hangtag Edition II',
+    title: 'Brand Tag - Back',
     category: 'PRINT',
     src: 'assets/print designs/gather_tag01-02.webp',
-    alt: 'Gather apparel hangtag 02',
+    alt: 'Gather, Brand Tag - Back',
     colWidth: 'col-narrow'
   },
 
@@ -348,39 +348,39 @@ const portfolioData = [
   {
     id: 'dig-gather-logo',
     brand: 'Gather',
-    title: 'Brandmark Identity Design',
+    title: 'Brand Identity & Logo',
     category: 'DIGITAL',
     src: 'assets/digital designs/gather_logo_with_bg.webp',
-    alt: 'Gather brandmark on dark background',
+    alt: 'Brand Identity & Logo',
     colWidth: 'col-narrow'
   },
   {
     id: 'prt-dest-form2',
     brand: 'Destiny',
-    title: 'Printed Client Intake Form',
+    title: 'Donation Form',
     category: 'PRINT',
     src: 'assets/print designs/destiny form2.webp',
-    alt: 'Destiny client intake printed form',
+    alt: 'Donation Form',
     colWidth: 'col-narrow'
   },
 
   // --- COLUMN 19 ---
   {
     id: 'dig-ig02',
-    brand: 'Social Studio',
-    title: 'Editorial Feed Graphics II',
+    brand: 'Destiny',
+    title: 'Faith & Peace Social Media Design',
     category: 'DIGITAL',
     src: 'assets/digital designs/ig02.webp',
-    alt: 'Editorial social media graphics 02',
+    alt: 'Destiny, Faith & Peace Social Media Design',
     colWidth: 'col-narrow'
   },
   {
     id: 'prt-dest-form3',
     brand: 'Destiny',
-    title: 'Consultation Record Form',
+    title: 'Food Box Delivery Registration Form',
     category: 'PRINT',
     src: 'assets/print designs/destiny form3.webp',
-    alt: 'Destiny consultation record form print',
+    alt: 'Destiny, Food Box Delivery Registration Form',
     colWidth: 'col-narrow'
   },
 
@@ -388,19 +388,19 @@ const portfolioData = [
   {
     id: 'prt-gat-price',
     brand: 'Gather',
-    title: 'Retail Price Tag Print Design',
+    title: 'Product Price Tag',
     category: 'PRINT',
     src: 'assets/print designs/gather_pricetag.webp',
-    alt: 'Gather retail price tag print',
+    alt: 'Gather, Product Price Tag',
     colWidth: 'col-narrow'
   },
   {
     id: 'prt-juzt-track1',
     brand: 'Juztshine',
-    title: 'Daily Workout Tracker Insert',
+    title: 'Body Measurement Tracker',
     category: 'PRINT',
     src: 'assets/print designs/juztshine_workout_tracker01.webp',
-    alt: 'Juztshine daily workout tracker print insert',
+    alt: 'Juztshine, Body Measurement Tracker',
     colWidth: 'col-narrow'
   },
 
@@ -408,19 +408,19 @@ const portfolioData = [
   {
     id: 'prt-gat-tag2-1',
     brand: 'Gather',
-    title: 'Product Packaging Tag I',
+    title: 'Product Tag - Front',
     category: 'PRINT',
     src: 'assets/print designs/gather_tag02-01.webp',
-    alt: 'Gather packaging product tag 01',
+    alt: 'Gather, Product Tag - Front',
     colWidth: 'col-narrow'
   },
   {
     id: 'prt-juzt-track2',
     brand: 'Juztshine',
-    title: 'Exercise Progress Log Sheet',
+    title: 'Weight Training Plan',
     category: 'PRINT',
     src: 'assets/print designs/juztshine_workout_tracker_02.webp',
-    alt: 'Juztshine exercise progress log sheet',
+    alt: 'Juztshine, Weight Training Plan',
     colWidth: 'col-narrow'
   },
 
@@ -428,19 +428,19 @@ const portfolioData = [
   {
     id: 'prt-gat-tag2-2',
     brand: 'Gather',
-    title: 'Product Packaging Tag II',
+    title: 'Product Tag - Back',
     category: 'PRINT',
     src: 'assets/print designs/gather_tag02-02.webp',
-    alt: 'Gather packaging product tag 02',
+    alt: 'Gather, Product Tag - Back',
     colWidth: 'col-narrow'
   },
   {
     id: 'prt-gat-qr',
     brand: 'Gather',
-    title: 'Brand QR Stand Display',
+    title: 'QR Code Payment Stand',
     category: 'PRINT',
     src: 'assets/print designs/gather, qr stand.webp',
-    alt: 'Gather brand QR stand counter display',
+    alt: 'Gather, QR Code Payment Stand',
     colWidth: 'col-narrow'
   }
 ];
